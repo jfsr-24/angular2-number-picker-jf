@@ -1,0 +1,170 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\angular2-number-picker-jf\\angular2-number-picker-jf',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\angular2-number-picker-jf\0.8.8\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle angular2-number-picker-jf@0.8.8~prepublish: angular2-number-picker-jf@0.8.8
+11 silly lifecycle angular2-number-picker-jf@0.8.8~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\jfsuarez.TBA\\AppData\\Roaming\\npm-cache\\angular2-number-picker-jf\\0.8.8\\package.tgz',
+12 verbose tar pack   'C:\\angular2-number-picker-jf\\angular2-number-picker-jf' ]
+13 verbose tarball C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\angular2-number-picker-jf\0.8.8\package.tgz
+14 verbose folder C:\angular2-number-picker-jf\angular2-number-picker-jf
+15 verbose addLocalTarball adding from inside cache C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\angular2-number-picker-jf\0.8.8\package.tgz
+16 verbose correctMkdir C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd angular2-number-picker-jf@0.8.8
+18 verbose afterAdd C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\angular2-number-picker-jf\0.8.8\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\angular2-number-picker-jf\0.8.8\package\package.json written
+21 silly publish { name: 'angular2-number-picker-jf',
+21 silly publish   description: 'A generic number picker Angular component (v. 2.0.0+) for Twitter Bootstrap',
+21 silly publish   version: '0.8.8',
+21 silly publish   author: { name: 'jfsr24@gmail.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/jfsr-24/angular2-number-picker-jf.git' },
+21 silly publish   keywords: [ 'Angular', '2', 'number', 'picker', 'bootstrap' ],
+21 silly publish   bugs: { url: 'https://github.com/FuKe/angular2-number-picker/issues' },
+21 silly publish   scripts: { watch: 'tsc -p src -w', build: 'rm -rf lib && tsc -p src' },
+21 silly publish   private: false,
+21 silly publish   dependencies:
+21 silly publish    { '@angular/common': '^2.4.4',
+21 silly publish      '@angular/compiler': '^2.4.4',
+21 silly publish      '@angular/core': '^2.4.4',
+21 silly publish      '@angular/forms': '^2.4.4',
+21 silly publish      '@angular/platform-browser': '^2.4.4',
+21 silly publish      '@angular/platform-browser-dynamic': '^2.4.4',
+21 silly publish      rxjs: '^5.0.1',
+21 silly publish      'zone.js': '^0.7.2' },
+21 silly publish   devDependencies: { typescript: '~2.1.5' },
+21 silly publish   readme: '# angular2-number-picker #\n[![GitHub version](https://badge.fury.io/gh/FuKe%2Fangular2-number-picker.svg)](https://badge.fury.io/gh/FuKe%2Fangular2-number-picker)\n[![NPM version][npm-image]][npm-url]\n\nA generic number picker Angular component (v. 2.0.0+) for Twitter Bootstrap\n\n![](https://raw.githubusercontent.com/jfsr-24/angular2-number-picker-jf/master/docs/images/example.png)\n\n## Requirements ##\n* [Angular](https://angular.io) (2.0.0+)\n\n## UI Dependency ##\n* [Twitter Bootstrap](http://getbootstrap.com) (3.3.5+)\n\n## Installation ##\n\n```\nnpm install angular2-number-picker -save\n```\n\n## Basic usage ##\nImport the NumberPickerComponent in your `app.module` and add it to the declarations array.\nAlternatively, you can import the NumberPickerComponent to a shared module, to make it available across all modules in your Angular application.\n\n```javascript\n...\nimport { NumberPickerComponent } from \'angular2-number-picker/components\';\nimport { AppComponent } from \'./app.component\';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    NumberPickerComponent\n  ],\n  imports: [\n    ...\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n```\n\nAdd the `angular2-number-picker` directive to the page where you want to use the number picker.\n```html\n<angular2-number-picker [min]="1" [max]="6" [step]="1" [precision]="1" [inputDisabled]="true" (onChange)="onNumberChanged($event)"></angular2-number-picker>\n```\n\n### Directive Inputs and Outputs ###\n| Attribute        | Type           | Required  | Description |\n| :------------- |:-------------| :-----:| :-----|\n| min | [input] Number | No | The minimal number limit on the number picker. 0 by default |\n| max | [input] Number | No | The maximum number limit on the number picker. 100 by default |\n| step | [input] Number | No | The step value for the number picker. 1 by default |\n| precision | [input] Number | No | The decimal precision for the number picker, if the step input value is a decimal value. 1 by default |\n| inputDisabled | [input] Boolean | No | Defines if the input input should be disabled / editable by the user. false by default |\n| onChange | (output) Number | No | The onChange event of the component. Emits the value of the number picker, every time the user has clicked the - or + button. |\n\n\n[npm-url]: https://npmjs.org/package/angular2-number-picker\n[npm-image]: https://badge.fury.io/js/angular2-number-picker.png',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '02c7dcecc460fdb2d93e134968f7e0ad30a7a3c6',
+21 silly publish   homepage: 'https://github.com/jfsr-24/angular2-number-picker-jf#readme',
+21 silly publish   _id: 'angular2-number-picker-jf@0.8.8',
+21 silly publish   _shasum: '81450c7d4bc4052f3ed7300af7975d4be345d976',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name angular2-number-picker-jf
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'angular2-number-picker-jf',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'angular2-number-picker-jf',
+26 silly mapToRegistry   name: 'angular2-number-picker-jf',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/angular2-number-picker-jf
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\angular2-number-picker-jf\0.8.8\package.tgz
+30 verbose request uri https://registry.npmjs.org/angular2-number-picker-jf
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 16:53:11
+33 verbose request using bearer token for auth
+34 verbose request id 7593e1d5e396e0cd
+35 http request PUT https://registry.npmjs.org/angular2-number-picker-jf
+36 http 503 https://registry.npmjs.org/angular2-number-picker-jf
+37 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+37 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+37 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+37 verbose bad json <html>
+37 verbose bad json   <head>
+37 verbose bad json     <title>503 first byte timeout</title>
+37 verbose bad json   </head>
+37 verbose bad json   <body>
+37 verbose bad json     <h1>Error 503 first byte timeout</h1>
+37 verbose bad json     <p>first byte timeout</p>
+37 verbose bad json     <h3>Guru Mediation:</h3>
+37 verbose bad json     <p>Details: cache-atl6230-ATL 1485899610 1946890536</p>
+37 verbose bad json     <hr>
+37 verbose bad json     <p>Varnish cache server</p>
+37 verbose bad json   </body>
+37 verbose bad json </html>
+38 error registry error parsing json
+39 verbose headers { server: 'Varnish',
+39 verbose headers   'retry-after': '0',
+39 verbose headers   'content-type': 'text/html; charset=utf-8',
+39 verbose headers   'content-length': '448',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Tue, 31 Jan 2017 21:53:30 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'close',
+39 verbose headers   'x-served-by': 'cache-atl6230-ATL',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1485899580.766699,VS0,VE30169' }
+40 info retry will retry, error on last attempt: SyntaxError: Unexpected token < in JSON at position 1
+40 info retry
+40 info retry <?xml version="1.0" encoding="utf-8"?>
+40 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+40 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+40 info retry <html>
+40 info retry   <head>
+40 info retry     <title>503 first byte timeout</title>
+40 info retry   </head>
+40 info retry   <body>
+40 info retry     <h1>Error 503 first byte timeout</h1>
+40 info retry     <p>first byte timeout</p>
+40 info retry     <h3>Guru Mediation:</h3>
+40 info retry     <p>Details: cache-atl6230-ATL 1485899610 1946890536</p>
+40 info retry     <hr>
+40 info retry     <p>Varnish cache server</p>
+40 info retry   </body>
+40 info retry </html>
+41 info attempt registry request try #2 at 16:53:51
+42 verbose request using bearer token for auth
+43 http request PUT https://registry.npmjs.org/angular2-number-picker-jf
+44 http 403 https://registry.npmjs.org/angular2-number-picker-jf
+45 verbose headers { 'content-type': 'application/json',
+45 verbose headers   'cache-control': 'max-age=300',
+45 verbose headers   'content-length': '95',
+45 verbose headers   'accept-ranges': 'bytes',
+45 verbose headers   date: 'Tue, 31 Jan 2017 21:53:42 GMT',
+45 verbose headers   via: '1.1 varnish',
+45 verbose headers   connection: 'keep-alive',
+45 verbose headers   'x-served-by': 'cache-atl6243-ATL',
+45 verbose headers   'x-cache': 'MISS',
+45 verbose headers   'x-cache-hits': '0',
+45 verbose headers   'x-timer': 'S1485899621.357954,VS0,VE715',
+45 verbose headers   vary: 'Accept-Encoding' }
+46 verbose request invalidating C:\Users\jfsuarez.TBA\AppData\Roaming\npm-cache\registry.npmjs.org\angular2-number-picker-jf on PUT
+47 error publish Failed PUT 403
+48 verbose stack Error: "You cannot publish over the previously published version 0.8.8." : angular2-number-picker-jf
+48 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+48 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+48 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+48 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+48 verbose stack     at emitTwo (events.js:106:13)
+48 verbose stack     at Request.emit (events.js:191:7)
+48 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1044:10)
+48 verbose stack     at emitOne (events.js:96:13)
+48 verbose stack     at Request.emit (events.js:188:7)
+48 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:965:12)
+49 verbose statusCode 403
+50 verbose pkgid angular2-number-picker-jf
+51 verbose cwd C:\angular2-number-picker-jf\angular2-number-picker-jf
+52 error Windows_NT 10.0.10586
+53 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+54 error node v6.9.1
+55 error npm  v3.10.8
+56 error code E403
+57 error "You cannot publish over the previously published version 0.8.8." : angular2-number-picker-jf
+58 error If you need help, you may report this error at:
+58 error     <https://github.com/npm/npm/issues>
+59 verbose exit [ 1, true ]
