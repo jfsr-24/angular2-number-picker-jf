@@ -1,10 +1,9 @@
-<div class="input-group">  
-      <div class="input-group-btn">
-        <button class="triangulocontrol-left" (click)="decreaseValue()"></button>
-      </div>
-      <p class="labelcontrolnp">{{labelmod}}</p>
-      <input [formControl]="numberPicker" class="form-control numberpicker-tb" type="number" min="{{min}}" max="{{max}}" pattern="{{pattern}}"/>  
-      <div class="input-group-btn">
-        <button class="triangulocontrol-right" (click)="increaseValue()"></button>
-      </div>
+<div class="input-group">	
+	<div class="input-group-btn">
+		<button class="btn btn-default" (click)="decreaseValue()">-</button>
+	</div>
+	<input [formControl]="numberPicker" class="form-control" type="number" min="{{min}}" max="{{max}}" pattern="{{pattern}}"/>	
+	<div class="input-group-btn">
+		<button class="btn btn-primary" (click)="increaseValue()">+</button>
+	</div>
 </div>

@@ -1,1 +1,1 @@
-exports.NumberPickerComponent = require('./lib/number-picker.component').NumberPickerComponent;
+exports.NumberPickerjfComponent = require('./lib/number-picker.component').NumberPickerjfComponent;

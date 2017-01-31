@@ -2,17 +2,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'angular2-number-picker',
+  selector: 'angular2-number-picker-jf',
   template: `
-		<div class="input-group">  
-      <div class="input-group-btn">
-        <button class="triangulocontrol-left" (click)="decreaseValue()"></button>
-      </div>
-      <p class="labelcontrolnp">{{labelmod}}</p>
-      <input [formControl]="numberPicker" class="form-control numberpicker-tb" type="number" min="{{min}}" max="{{max}}" pattern="{{pattern}}"/>  
-      <div class="input-group-btn">
-        <button class="triangulocontrol-right" (click)="increaseValue()"></button>
-      </div>
+		<div class="input-group">	
+			<div class="input-group-btn">
+				<button class="btn btn-default" (click)="decreaseValue()">-</button>
+			</div>
+			<input [formControl]="numberPicker" class="form-control" type="number" min="{{min}}" max="{{max}}" pattern="{{pattern}}"/>	
+			<div class="input-group-btn">
+				<button class="btn btn-primary" (click)="increaseValue()">+</button>
+			</div>
 		</div>
   `,
   styles: [`
@@ -26,7 +25,7 @@ import { FormControl } from '@angular/forms';
     }
   `]
 })
-export class NumberPickerComponent implements OnInit {
+export class NumberPickerjfComponent implements OnInit {
 	@Input() min: number;
 	@Input() max: number;
 	@Input() step: number;

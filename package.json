@@ -1,12 +1,12 @@
 {
-  "name": "angular2-number-picker",
+  "name": "angular2-number-picker-jf",
   "description": "A generic number picker Angular component (v. 2.0.0+) for Twitter Bootstrap",
-  "version": "0.8.4",
-  "author": "fuke93@gmail.com",
+  "version": "0.8.7",
+  "author": "jfsr24@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FuKe/angular2-number-picker.git"
+    "url": "git+https://github.com/jfsr-24/angular2-number-picker-jf.git"
   },
   "keywords": [
     "Angular",
